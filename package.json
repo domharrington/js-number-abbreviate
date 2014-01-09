@@ -1,0 +1,26 @@
+{
+  "name": "number-abbreviate",
+  "version": "0.0.0",
+  "description": "Abbreviate a number and add unit letters e.g. 2200000 => '2.2m'",
+  "author": "Dom Harrington <dom@harrington-mail.com>",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint .",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/_mocha -- -R spec -r should test.js",
+    "prepublish": "npm test && npm prune"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "keywords": [
+    "number",
+    "number-abbreviate",
+    "abbreviate"
+  ],
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "jshint": "~2.3.0"
+  }
+}
