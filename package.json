@@ -1,12 +1,12 @@
 {
   "name": "number-abbreviate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Abbreviate a number and add unit letters e.g. 2200000 => '2.2m'",
   "author": "Dom Harrington <dom@harrington-mail.com>",
   "main": "index.js",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/domharrington/js-number-abbreviate.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/domharrington/js-number-abbreviate.git"
   },
   "scripts": {
     "lint": "./node_modules/.bin/jshint .",
