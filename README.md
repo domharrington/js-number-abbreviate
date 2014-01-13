@@ -2,7 +2,7 @@
 
 Abbreviate a number and add unit letters e.g. 2200000 => '2.2m'
 
-[![build status](https://secure.travis-ci.org/domharrington/number-abbreviate.png)](http://travis-ci.org/domharrington/number-abbreviate)
+[![build status](https://secure.travis-ci.org/domharrington/js-number-abbreviate.png)](http://travis-ci.org/domharrington/js-number-abbreviate)
 
 Code inspired by [http://stackoverflow.com/questions/2685911/is-there-a-way-to-round-numbers-into-a-reader-friendly-format-e-g-1-1k](http://stackoverflow.com/questions/2685911/is-there-a-way-to-round-numbers-into-a-reader-friendly-format-e-g-1-1k)
 
