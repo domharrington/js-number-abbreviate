@@ -1,25 +1,35 @@
-module.exports = function numberAbbreviate(number, decPlaces) {
-  decPlaces = Math.pow(10, decPlaces)
+(function(root){
+    'use strict';
 
-  var abbrev = [ 'k', 'm', 'b', 't' ]
+    var numberAbbreviate = function(number, decPlaces) {
+	decPlaces = Math.pow(10, decPlaces)
 
-  for (var i = abbrev.length - 1; i>=0; i--) {
+	var abbrev = [ 'k', 'm', 'b', 't' ]
 
-    var size = Math.pow(10, (i + 1) * 3)
+	for (var i = abbrev.length - 1; i>=0; i--) {
 
-    if(size <= number) {
-      number = Math.round(number * decPlaces / size) / decPlaces
+	    var size = Math.pow(10, (i + 1) * 3)
 
-      if((number === 1000) && (i < abbrev.length - 1)) {
-        number = 1
-        i++
-      }
+	    if(size <= number) {
+		number = Math.round(number * decPlaces / size) / decPlaces
 
-      number += abbrev[i]
+		if((number === 1000) && (i < abbrev.length - 1)) {
+		    number = 1
+		    i++
+		}
 
-      break
+		number += abbrev[i]
+
+		break
+	    }
+	}
+
+	return number
+    };
+    
+    if (typeof module !== 'undefined' && module.exports) {
+	module.exports = numberAbbreviate;
+    } else {
+	root.numberAbbreviate = numberAbbreviate;
     }
-  }
-
-  return number
-}
+})(this);
