@@ -1,0 +1,24 @@
+{
+  "name": "number-abbreviate",
+  "main": "index.js",
+  "version": "0.0.2",
+  "homepage": "https://github.com/domharrington/js-number-abbreviate",
+  "description": "Abbreviate a number and add unit letters e.g. 2200000 => '2.2m'",
+  "keywords": [
+    "number",
+    "number-abbreviate",
+    "abbreviate"
+  ],
+  "authors": [
+    "Dom Harrington <dom@harrington-mail.com>"
+  ],
+  "license": "BSD-2-Clause",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "test.js"
+  ]
+}
