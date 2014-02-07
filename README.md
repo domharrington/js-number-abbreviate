@@ -8,7 +8,7 @@ Code inspired by [http://stackoverflow.com/questions/2685911/is-there-a-way-to-r
 
 ## Example
 ``` js
-  var numAbbr = require('number-abbreviate')
+  var numAbbr = require('number-abbreviate')()
 
   numAbbr(12, 1)
   // => 12
@@ -28,10 +28,12 @@ Code inspired by [http://stackoverflow.com/questions/2685911/is-there-a-way-to-r
 
 ## Usage
 ``` js
-  var numAbbr = require('number-abbreviate')
+  var numAbbr = require('number-abbreviate')([numberAbbreviations])
 
   numAbbr([number], [decPlaces])
 ```
+
+The `numberAbbreviations` is optional. It can be an array of units, defaulting to `['k', 'm', 'b', 't']`.
 
 ### numAbbr([number], [decPlaces])
 
@@ -40,6 +42,8 @@ Takes a number and the number of decimal places to abbreviate
 ## Installation
 
     npm install number-abbreviate --save
+
+    bower install number-abbreviate
 
 ## Credits
 [Dom Harrington](https://twitter.com/domharrington)
