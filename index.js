@@ -1,36 +1,37 @@
 (function(root){
-  'use strict';
+    'use strict';
+    
+    var NumberAbbreviate = function(abbrev) {
+	this.abbrev = abbrev == null ? ['k', 'm', 'b', 't'] : abbrev;
+    };
+    
+    NumberAbbreviate.prototype.abbreviate = function(number, decPlaces) {
+	decPlaces = Math.pow(10, decPlaces);
+	
+	for (var i = this.abbrev.length - 1; i>=0; i--) {
 
-  function numberAbbreviate(number, decPlaces) {
-    decPlaces = Math.pow(10, decPlaces)
+	    var size = Math.pow(10, (i + 1) * 3);
 
-    var abbrev = [ 'k', 'm', 'b', 't' ]
+	    if(size <= number) {
+		number = Math.round(number * decPlaces / size) / decPlaces;
 
-    for (var i = abbrev.length - 1; i>=0; i--) {
+		if((number === 1000) && (i < this.abbrev.length - 1)) {
+		    number = 1;
+		    i++;
+		}
 
-      var size = Math.pow(10, (i + 1) * 3)
+		number += this.abbrev[i];
 
-      if (size <= number) {
-        number = Math.round(number * decPlaces / size) / decPlaces
+		break;
+	    }
+	}
 
-        if ((number === 1000) && (i < abbrev.length - 1)) {
-          number = 1
-          i++
-        }
+	return number
+    };
 
-        number += abbrev[i]
-
-        break
-      }
+    if (typeof module !== 'undefined' && module.exports) {
+	module.exports = NumberAbbreviate;
+    } else {
+	root.NumberAbbreviate = NumberAbbreviate;
     }
-
-    return number
-  }
-
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = numberAbbreviate;
-  } else {
-    root.numberAbbreviate = numberAbbreviate;
-  }
-
 })(this);
