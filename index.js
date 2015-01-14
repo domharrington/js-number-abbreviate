@@ -36,4 +36,4 @@
     root.NumberAbbreviate = NumberAbbreviate
   }
 
-})(this)
+})(this);
