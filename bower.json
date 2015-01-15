@@ -1,7 +1,7 @@
 {
   "name": "number-abbreviate",
   "main": "index.js",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "homepage": "https://github.com/domharrington/js-number-abbreviate",
   "description": "Abbreviate a number and add unit letters e.g. 2200000 => '2.2m'",
   "keywords": [
