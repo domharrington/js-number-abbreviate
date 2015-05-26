@@ -40,4 +40,14 @@ describe('number-abbreviate', function () {
 
   })
 
+  it('should abbreviate negative numbers', function () {
+    var numAbbr = new NumAbbr()
+    assert.equal(numAbbr.abbreviate(-12, 1), '-12')
+    assert.equal(numAbbr.abbreviate(-1234, 0), '-1k')
+    assert.equal(numAbbr.abbreviate(-34567, 2), '-34.57k')
+    assert.equal(numAbbr.abbreviate(-918395, 1), '-918.4k')
+    assert.equal(numAbbr.abbreviate(-2134124, 2), '-2.13m')
+    assert.equal(numAbbr.abbreviate(-47475782130, 2), '-47.48b')
+    assert.equal(numAbbr.abbreviate(-47475782130000, 2), '-47.48t')
+  });
 })
