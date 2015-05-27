@@ -24,6 +24,12 @@ Code inspired by [http://stackoverflow.com/questions/2685911/is-there-a-way-to-r
   // => 2.13m
   numAbbr(47475782130, 2)
   // => 47.48b
+  numAbbr(-1234, 0)
+  // => -1k
+  numAbbr(-918395, 1)
+  // => -918.4k
+  numAbbr(-47475782130, 2)
+  // => -47.48b
 ```
 
 ## Usage
