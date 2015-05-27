@@ -1,5 +1,5 @@
 (function(root){
-  'use strict'
+  'use strict';
 
   function NumberAbbreviate(abbrev) {
     if (!(this instanceof NumberAbbreviate)) return new NumberAbbreviate(abbrev)
