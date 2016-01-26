@@ -32,6 +32,13 @@ describe('number-abbreviate', function () {
 
   })
 
+  it('should default decimal place argument to 0', function () {
+
+    var numAbbr = new NumAbbr()
+    assert.equal(numAbbr.abbreviate(1234), '1k')
+
+  })
+
   it('should allow it to be called without `new`', function () {
 
     var numAbbr = numAbbrFn(['KB', 'MB', 'GB', 'T'])
