@@ -1,6 +1,6 @@
 {
   "name": "number-abbreviate",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Abbreviate a number and add unit letters e.g. 2200000 => '2.2m'",
   "author": "Dom Harrington <dom@harrington-mail.com>",
   "main": "index.js",
