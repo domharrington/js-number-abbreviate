@@ -8,42 +8,46 @@ Code inspired by [http://stackoverflow.com/questions/2685911/is-there-a-way-to-r
 
 ## Example
 ``` js
-  var numAbbr = require('number-abbreviate')()
+  var NumAbbr = require('number-abbreviate')
 
-  numAbbr(12, 1)
+  var numAbbr = new NumAbbr()
+
+  numAbbr.abbreviate(12, 1)
   // => 12
-  numAbbr(0, 2)
+  numAbbr.abbreviate(0, 2)
   // => 0
-  numAbbr(1234, 0)
+  numAbbr.abbreviate(1234, 0)
   // => 1k
-  numAbbr(34567, 2)
+  numAbbr.abbreviate(34567, 2)
   // => 34.57k
-  numAbbr(918395, 1)
+  numAbbr.abbreviate(918395, 1)
   // => 918.4k
-  numAbbr(2134124, 2)
+  numAbbr.abbreviate(2134124, 2)
   // => 2.13m
-  numAbbr(47475782130, 2)
+  numAbbr.abbreviate(47475782130, 2)
   // => 47.48b
-  numAbbr(-1234, 0)
+  numAbbr.abbreviate(-1234, 0)
   // => -1k
-  numAbbr(-918395, 1)
+  numAbbr.abbreviate(-918395, 1)
   // => -918.4k
-  numAbbr(-47475782130, 2)
+  numAbbr.abbreviate(-47475782130, 2)
   // => -47.48b
 ```
 
 ## Usage
 ``` js
-  var numAbbr = require('number-abbreviate')([numberAbbreviations])
+  var NumAbbr = require('number-abbreviate')
 
-  numAbbr([number], [decPlaces])
+  var numAbbr = new NumAbbr([numberAbbreviations])
+
+  numAbbr.abbreviate([number], [decPlaces])
 ```
 
 The `numberAbbreviations` is optional. It can be an array of units, defaulting to `['k', 'm', 'b', 't']`.
 
 `decPlaces` is also optional. It defaults to 0.
 
-### numAbbr([number], [decPlaces])
+### numAbbr.abbreviate([number], [decPlaces])
 
 Takes a number and the number of decimal places to abbreviate
 
