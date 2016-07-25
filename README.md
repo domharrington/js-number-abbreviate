@@ -41,6 +41,8 @@ Code inspired by [http://stackoverflow.com/questions/2685911/is-there-a-way-to-r
 
 The `numberAbbreviations` is optional. It can be an array of units, defaulting to `['k', 'm', 'b', 't']`.
 
+`decPlaces` is also optional. It defaults to 0.
+
 ### numAbbr([number], [decPlaces])
 
 Takes a number and the number of decimal places to abbreviate

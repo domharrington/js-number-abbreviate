@@ -32,7 +32,7 @@
 
   NumberAbbreviate.prototype.abbreviate = function(number, decPlaces) {
     var isNegative = number < 0
-    var abbreviatedNumber = this._abbreviate(Math.abs(number), decPlaces)
+    var abbreviatedNumber = this._abbreviate(Math.abs(number), decPlaces || 0)
 
     return isNegative ? '-' + abbreviatedNumber : abbreviatedNumber;
   }
