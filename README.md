@@ -7,6 +7,17 @@ Abbreviate a number and add unit letters e.g. 2200000 => '2.2m'
 Code inspired by [http://stackoverflow.com/questions/2685911/is-there-a-way-to-round-numbers-into-a-reader-friendly-format-e-g-1-1k](http://stackoverflow.com/questions/2685911/is-there-a-way-to-round-numbers-into-a-reader-friendly-format-e-g-1-1k)
 
 ## Example
+Simple/shorthand mode:
+
+```js
+var abbreviate = require('number-abbreviate')
+abbreviate(1000) // => 1k
+abbreviate(1111, 0) // => 1k
+abbreviate(1111, 1) // => 1.1k
+abbreviate(1111, 2) // => 1.11k
+```
+
+Class/constructor mode:
 ``` js
   var NumAbbr = require('number-abbreviate')
 

@@ -1,27 +1,37 @@
 (function(root){
   'use strict';
 
-  function NumberAbbreviate(abbrev) {
-    if (!(this instanceof NumberAbbreviate)) return new NumberAbbreviate(abbrev)
-    this.abbrev = abbrev == null ? ['k', 'm', 'b', 't'] : abbrev
+  function NumberAbbreviate() {
+    var units
+    if (!(this instanceof NumberAbbreviate)) {
+      // function usage: abbrev(n, decPlaces, units)
+      var n = arguments[0]
+      var decPlaces = arguments[1]
+      units = arguments[2]
+      var ab = new NumberAbbreviate(units)
+      return ab.abbreviate(n, decPlaces)
+    }
+    // class usage: new NumberAbbreviate(units)
+    units = arguments[0]
+    this.units = units == null ? ['k', 'm', 'b', 't'] : units
   }
 
   NumberAbbreviate.prototype._abbreviate = function(number, decPlaces) {
     decPlaces = Math.pow(10, decPlaces)
 
-    for (var i = this.abbrev.length - 1; i >= 0; i--) {
+    for (var i = this.units.length - 1; i >= 0; i--) {
 
       var size = Math.pow(10, (i + 1) * 3)
 
       if (size <= number) {
         number = Math.round(number * decPlaces / size) / decPlaces
 
-        if ((number === 1000) && (i < this.abbrev.length - 1)) {
+        if ((number === 1000) && (i < this.units.length - 1)) {
           number = 1
           i++
         }
 
-        number += this.abbrev[i]
+        number += this.units[i]
 
         break
       }

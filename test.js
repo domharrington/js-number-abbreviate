@@ -39,11 +39,11 @@ describe('number-abbreviate', function () {
 
   })
 
-  it('should allow it to be called without `new`', function () {
+  it('calling the function without `new` enters shorthand mode', function () {
 
-    var numAbbr = numAbbrFn(['KB', 'MB', 'GB', 'T'])
-    assert.equal(numAbbr.abbreviate(13, 1), '13')
-    assert.equal(numAbbr.abbreviate(0.0, 4), '0')
+    assert.equal(numAbbrFn(13, 1, ['KB', 'MB', 'GB', 'T']), '13')
+    assert.equal(numAbbrFn(0.0, 4, ['KB', 'MB', 'GB', 'T']), '0')
+
 
   })
 
