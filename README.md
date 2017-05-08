@@ -19,42 +19,42 @@ abbreviate(1111, 2) // => 1.11k
 
 Class/constructor mode:
 ``` js
-  var NumAbbr = require('number-abbreviate')
+var NumAbbr = require('number-abbreviate')
 
-  var numAbbr = new NumAbbr()
+var numAbbr = new NumAbbr()
 
-  numAbbr.abbreviate(12, 1)
-  // => 12
-  numAbbr.abbreviate(0, 2)
-  // => 0
-  numAbbr.abbreviate(1234, 0)
-  // => 1k
-  numAbbr.abbreviate(34567, 2)
-  // => 34.57k
-  numAbbr.abbreviate(918395, 1)
-  // => 918.4k
-  numAbbr.abbreviate(2134124, 2)
-  // => 2.13m
-  numAbbr.abbreviate(47475782130, 2)
-  // => 47.48b
-  numAbbr.abbreviate(-1234, 0)
-  // => -1k
-  numAbbr.abbreviate(-918395, 1)
-  // => -918.4k
-  numAbbr.abbreviate(-47475782130, 2)
-  // => -47.48b
+numAbbr.abbreviate(12, 1)
+// => 12
+numAbbr.abbreviate(0, 2)
+// => 0
+numAbbr.abbreviate(1234, 0)
+// => 1k
+numAbbr.abbreviate(34567, 2)
+// => 34.57k
+numAbbr.abbreviate(918395, 1)
+// => 918.4k
+numAbbr.abbreviate(2134124, 2)
+// => 2.13m
+numAbbr.abbreviate(47475782130, 2)
+// => 47.48b
+numAbbr.abbreviate(-1234, 0)
+// => -1k
+numAbbr.abbreviate(-918395, 1)
+// => -918.4k
+numAbbr.abbreviate(-47475782130, 2)
+// => -47.48b
 ```
 
 ## Usage
 ``` js
-  var NumAbbr = require('number-abbreviate')
+var NumAbbr = require('number-abbreviate')
 
-  var numAbbr = new NumAbbr([numberAbbreviations])
+var numAbbr = new NumAbbr([units])
 
-  numAbbr.abbreviate([number], [decPlaces])
+numAbbr.abbreviate([number], [decPlaces])
 ```
 
-The `numberAbbreviations` is optional. It can be an array of units, defaulting to `['k', 'm', 'b', 't']`.
+The `units` is optional. It can be an array of units, defaulting to `['k', 'm', 'b', 't']`.
 
 `decPlaces` is also optional. It defaults to 0.
 
@@ -63,10 +63,11 @@ The `numberAbbreviations` is optional. It can be an array of units, defaulting t
 Takes a number and the number of decimal places to abbreviate
 
 ## Installation
+```
+npm install number-abbreviate --save
 
-    npm install number-abbreviate --save
-
-    bower install number-abbreviate
+bower install number-abbreviate
+```
 
 ## Credits
 [Dom Harrington](https://twitter.com/domharrington)
